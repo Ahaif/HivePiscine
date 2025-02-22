@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abhaifou <abhaifou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 11:22:49 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/19 17:57:20 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/20 14:44:01 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/21 10:48:33 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
 
-void	ft_putchar(char c)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	write(1, &c, 1);
+	if(b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 // int main()
 // {
-//     char c = 'c';
-//     ft_putchar(c);
-//     ft_putchar('\n');
-//     ft_putchar('s');
-//     ft_putchar('\n');
+// 	int a =4;
+// 	int b =2;
 
+// 	*int div = &a;
+// 	*int mod = &b;
+// 	ft_div_mod(a, b, div, mod);
 // }

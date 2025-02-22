@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abhaifou <abhaifou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 11:31:02 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/19 18:00:09 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/21 10:39:12 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_print_alphabet(void)
+// #include <unistd.h>
+void	ft_putstr(char *str)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	i;
+
+	i = 0;
+	while(str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
-// int main(){
-//     ft_print_alphabet();
-//     write(1, "\n", 1);
+// int main()
+// {
+// 	ft_putstr("abdel moughite \n");
 // }

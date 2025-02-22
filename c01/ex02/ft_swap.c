@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abhaifou <abhaifou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 11:42:29 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/19 18:04:22 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/21 09:15:22 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/21 09:29:03 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	write(1, "123456789", 9);
+	int tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
+
 // int main()
 // {
-//     ft_print_numbers();
-//     write(1, "\n", 1);
-// }
+// 	int a =3;
+// 	int b=55;
+// 	printf("Before swap: a = %d, b = %d\n", a, b);
+// 	ft_swap(&a, &b);
+// 	printf("After swap: a = %d, b = %d\n", a, b);
+// }	
