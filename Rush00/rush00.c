@@ -6,7 +6,7 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 15:49:34 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/22 16:14:10 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/22 19:43:09 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,23 @@ void	print_line(int w, char left, char middle, char right)
 void	rush(int w, int h)
 {
 	int i = 0;
+	//   || or , && and
 
-	if(w <=0  | h <=0)
+	if(w <=0 || h <=0)
 		return;
 
 	if(h > 0)
-		print_line(w, 'o', '-', 'o');
+		print_line(w, '/', '*', '\\');
 
 	i = 1;
 
 	while(i < h-1)
 	{
-		print_line(w, '|', ' ', '|');
+		print_line(w, '*', ' ', '*');
 		i++;
 	}
 	if (h >1)
-		print_line(w, 'o', '-', 'o');
+		print_line(w, '\\', '*', '/');
 }
 
 

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/23 14:19:19 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/25 09:35:27 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-
+	if (dest == NULL || src == NULL)
+		return (NULL);
 	i = 0;
-	while (str[i])
+	while (src[i] && i < n)
 	{
-		write(1, &str[i], 1);
+		dest[i] = src[i];
 		i++;
 	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
-// int main()
-// {
-// 	ft_putstr("abdel moughite \n");
-// }

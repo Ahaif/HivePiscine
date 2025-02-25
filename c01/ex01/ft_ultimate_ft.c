@@ -6,7 +6,7 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 14:30:52 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/20 14:31:54 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/23 09:16:34 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void	ft_ultimate_ft(int *********nbr)
 // int main()
 // {
 //     int value; // Actual integer to store 42
-//     int *x = &value; // x now points to 'value'
-    
+//     int *x = &value; // x now points to 'value' 
 //     int **p1 = &x;
 //     int ***p2 = &p1;
 //     int ****p3 = &p2;

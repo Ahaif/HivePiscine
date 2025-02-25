@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/23 15:42:17 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/23 15:43:00 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
-{
-	int	i;
+int ft_str_is_printable(char *str)
+ {
+    int i;
 
 	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+    if (!str)
+        return 0;
+
+    if (str[0] == '\0')
+        return 1;
+
+    while (str[i]) {
+        if (!(str[i] >= 32 && str[i] <= 126))
+            return 0;
+        i++;
+    }
+    return 1;
 }
-// int main()
-// {
-// 	ft_putstr("abdel moughite \n");
-// }

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/24 09:28:09 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/24 09:29:05 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
-
+    unsigned int i;
+	
 	i = 0;
-	while (str[i])
+    if (!dest || !src)
+        return 0;
+    if (size > 0)
 	{
-		write(1, &str[i], 1);
-		i++;
-	}
+        while (src[i] && i < size - 1)
+		{
+            dest[i] = src[i];
+            i++;
+        }
+        dest[i] = '\0';
+    }
+    while (src[i])
+        i++;
+
+    return i;
 }
-// int main()
-// {
-// 	ft_putstr("abdel moughite \n");
-// }

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/23 15:44:45 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/23 15:45:06 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
+char *ft_strlowcase(char *str)
 {
-	int	i;
+    int	i;
 
 	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+    if (!str)
+        return str;
+
+    while (str[i]) {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            str[i] = str[i] + 32;
+        i++;
+    }
+    return str;
 }
-// int main()
-// {
-// 	ft_putstr("abdel moughite \n");
-// }

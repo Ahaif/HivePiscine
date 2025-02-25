@@ -7,6 +7,19 @@
 // int ft_strlen(char*str);
 // void ft_putstr(char *str);
 
+int ft_strlen(char *str);
+void ft_putstr(char *str);
+
+
+int main()
+{
+	char str[] = "Hello";
+
+	int result = ft_strlen(str);
+
+	ft_putstr(str);
+}
+
 
 int ft_strlen(char *str)
 {
@@ -29,17 +42,5 @@ void ft_putstr(char *str)
 		i++;
 	}
 }
-
-
-int main()
-{
-	char str[] = "Hello";
-
-	int result = ft_strlen(str);
-
-	ft_putstr(str);
-}
-
-
 
 

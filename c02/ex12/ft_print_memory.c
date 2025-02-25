@@ -1,28 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/24 09:30:39 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/24 09:31:34 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
+void	*ft_print_memory(void *addr, unsigned int size)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
 }
-// int main()
-// {
-// 	ft_putstr("abdel moughite \n");
-// }

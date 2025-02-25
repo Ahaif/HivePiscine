@@ -6,16 +6,16 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 10:40:03 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/21 10:41:01 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/23 09:22:36 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }

@@ -6,13 +6,14 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 09:15:22 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/21 09:29:03 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/23 09:17:40 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;

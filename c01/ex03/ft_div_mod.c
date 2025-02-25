@@ -6,13 +6,13 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 14:44:01 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/21 10:48:33 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/23 09:18:26 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	if(b != 0)
+	if (b != 0)
 	{
 		*div = a / b;
 		*mod = a % b;
