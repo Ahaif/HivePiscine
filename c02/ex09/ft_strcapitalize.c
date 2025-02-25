@@ -6,31 +6,51 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 15:46:46 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/23 15:48:37 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/25 11:10:52 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcapitalize(char *str) {
-    int i;
-    int new_word;
+char	to_lowercase(char c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
 
+char	to_uppercase(char c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+
+int	is_alphanumeric(char c)
+{
+	return (c >= 'a' && c <= 'z'
+		|| (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	int	i;
+	int	new_word;
+
+	if (!str)
+		return (str);
 	i = 0;
 	new_word = 1;
-    if (!str)
-        return str;
-    while (str[i]) {
-        if (str[i] >= 'A' && str[i] <= 'Z') {
-            str[i] = str[i] + 32;
-        }
-        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= '0' && str[i] <= '9')) {
-            if (new_word && (str[i] >= 'a' && str[i] <= 'z')) {
-                str[i] = str[i] - 32;
-            }
-            new_word = 0;
-        } else {
-            new_word = 1;
-        }
-        i++;
-    }
-    return str;
+	while (str[i])
+	{
+		str[i] = to_lowercase(str[i]);
+		if (is_alphanumeric(str[i]))
+		{
+			if (new_word && (str[i] >= 'a' && str[i] <= 'z'))
+				str[i] = to_uppercase(str[i]);
+			new_word = 0;
+		}
+		else
+			new_word = 1;
+		i++;
+	}
+	return (str);
 }

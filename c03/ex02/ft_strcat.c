@@ -1,15 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 09:30:39 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/24 09:31:34 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/25 12:40:49 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/25 12:45:24 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_print_memory(void *addr, unsigned int size)
+char	*ft_strcat(char *dest, char *src)
 {
+	char	*ptr;
+
+	ptr = dest;
+	while (*ptr)
+		ptr++;
+	while (*src)
+		*ptr++ = *src++;
+	*ptr = '\0';
+	return (dest);
 }

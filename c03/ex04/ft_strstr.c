@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/23 15:38:43 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/25 11:29:24 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/25 13:02:08 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/25 13:08:45 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
+	char	*s;
+	char	*sub;
 
-	i = 0;
-	if (!str)
-		return (0);
-	if (str[0] == '\0')
-		return (1);
-	while (str[i])
+	if (!*to_find)
+		return (str);
+	while (*str)
 	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (0);
-		i++;
+		s = str;
+		sub = to_find;
+		while (*s && *sub && *s == *sub)
+		{
+			s++;
+			sub++;
+		}
+		if (!*sub)
+			return (str);
+		str++;
 	}
-	return (1);
+	return (0);
 }
