@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/23 14:24:59 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/27 10:39:58 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/26 10:29:35 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/27 12:10:27 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<unistd.h>
 
-int	ft_str_is_alpha(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	if (str[0] == '\0')
-		return (1);
-	while (str[i])
-	{
-		if (!((str[i] >= 'A' && str[i] <= 'Z')
-				|| (str[i] >= 'a' && str[i] <= 'z')))
-			return (0);
-		i++;
-	}
-	return (1);
+	write(1, &c, 1);
 }
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
+}
+
+/*int main()
+{
+	int nbr = 24536;
+	ft_putnbr(nbr);
+}*/

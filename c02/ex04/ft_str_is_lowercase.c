@@ -6,7 +6,7 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 15:40:07 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/25 10:28:58 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:41:50 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,20 @@ int	ft_str_is_lowercase(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int	ft_str_is_lowercase(char *str);
+
+// int main()
+// {
+//     // Test cases
+//     printf("Test 1 (\"hello\"): %d\n",
+//     ft_str_is_lowercase("hello"));   // Expected: 1
+//     printf("Test 2 (\"Hello\"): %d\n",
+//     ft_str_is_lowercase("Hello"));   // Expected: 0
+
+//     system("leaks a.out"); // Check for memory leaks (useful in macOS)
+//     return 0;
+// }
