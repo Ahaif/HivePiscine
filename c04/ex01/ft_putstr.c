@@ -6,10 +6,11 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 10:27:10 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/26 10:28:48 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/02/27 19:07:10 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	int	i;
