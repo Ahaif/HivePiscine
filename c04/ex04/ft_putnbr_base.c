@@ -6,7 +6,7 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:08:39 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/02/27 19:06:06 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/03/02 12:08:29 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	is_valid_base(char *base)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	while (base[i])
 	{
@@ -31,7 +31,7 @@ int	is_valid_base(char *base)
 		}
 		i++;
 	}
-	return (i > 1); 
+	return (i > 1);
 }
 
 void	ft_putchar(char c)
@@ -39,14 +39,13 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int base_len;
+	int	base_len;
 
 	base_len = 0;
 	if (!is_valid_base(base))
-		return;
+		return ;
 	while (base[base_len])
 		base_len++;
 	if (nbr == -2147483648)
@@ -54,7 +53,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		ft_putchar('-');
 		ft_putnbr_base(-(nbr / base_len), base);
 		ft_putchar(base[-(nbr % base_len)]);
-		return;
+		return ;
 	}
 	if (nbr < 0)
 	{
