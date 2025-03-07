@@ -28,7 +28,6 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (result);
 }
-
 /*int main()
 {
     printf("2^3 = %d\n", ft_iterative_power(2, 3));  // Expected: 8

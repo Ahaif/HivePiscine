@@ -6,10 +6,11 @@
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 16:37:39 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/03/02 16:43:45 by abhaifou         ###   ########.fr       */
+/*   Updated: 2025/03/03 09:34:11 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+//#include <stdio.h>
 
 int	ft_recursive_power(int nb, int power)
 {
@@ -17,11 +18,9 @@ int	ft_recursive_power(int nb, int power)
 		return (0);
 	if (power == 0)
 		return (1);
-	return (nb * ft_recursive_power(nb, power - 1)); 
+	return (nb * ft_recursive_power(nb, power - 1));
 }
-
-
-int main()
+/*int main()
 {
     printf("2^3 = %d\n", ft_recursive_power(2, 3));  // Expected: 8
     printf("5^0 = %d\n", ft_recursive_power(5, 0));  // Expected: 1
@@ -29,5 +28,4 @@ int main()
     printf("3^-2 = %d\n", ft_recursive_power(3, -2)); // Expected: 0
     printf("4^2 = %d\n", ft_recursive_power(4, 2));  // Expected: 16
     return 0;
-}
-
+}*/

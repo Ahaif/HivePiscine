@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 14:32:12 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/03/02 16:21:40 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/03/05 09:19:33 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/03/06 11:59:49 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include<stdlib.h>
 
-int	ft_recursive_factorial(int nb)
+int	*ft_range(int min, int max)
 {
-	if (nb < 0)
-		return (0);
-	if (nb == 0 || nb == 1)
-		return (1);
-	return (nb * ft_recursive_factorial(nb - 1));
+	int	*res;
+	int	i;
+
+	if (min >= max)
+		return (NULL);
+	res = (int *)malloc((max - min) * sizeof(int));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (min < max)
+	{
+		res[i] = min;
+		i++;
+		min++;
+	}
+	return (res);
 }
 /*int main()
 {
-    printf("Factorial of 5: %d\n", ft_recursive_factorial(5));  // Expected: 120
-    printf("Factorial of 0: %d\n", ft_recursive_factorial(0));  // Expected: 1
-    printf("Factorial of -3: %d\n", ft_recursive_factorial(-3)); // Expected: 0
+    int *arr = ft_range(1, 10);
+    if (arr)
+        free(arr); // Prevent memory leak
     return 0;
 }*/
