@@ -50,7 +50,7 @@ int	get_index(char c, char *base)
 
 char	*skip_white_space(char *nbr)
 {
-	while (*nbr == ' ' || (*nbr >= 9 && *nbr >= 13))
+	while (*nbr == ' ' || (*nbr >= 9 && *nbr <= 13))
 		nbr++;
 	return (nbr);
 }
@@ -72,13 +72,11 @@ int	define_sign(char **nbr)
 int	ft_atoi_base(char *nbr, char *base_from)
 {
 	int	base_len;
-	int	i;
 	int	sign;
 	int	num;
 	int	index;
 
 	base_len = is_valid_base(base_from);
-	i = 0;
 	num = 0;
 	if (base_len < 2)
 		return (0);
