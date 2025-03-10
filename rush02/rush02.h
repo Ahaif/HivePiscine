@@ -20,5 +20,10 @@ t_dict *read_dictionary(char *filename, int *dict_size);
 int check_required_entries(t_dict *dict, int dict_size);
 int is_valid_number(char *str);
 void print_error(char *msg);
+int ft_strlen(char *str);
+char *ft_strdup(char *src);
+int ft_strcmp(char *s1, char *s2);
+void ft_putstr(char *str);
+void print_error(char *msg);
 
 #endif

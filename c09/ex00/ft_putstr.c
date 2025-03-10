@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 10:51:59 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/03/09 16:17:14 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/02/21 10:36:30 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/02/23 09:21:56 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#ifndef FT_H
-# define FT_H
+void	ft_putstr(char *str)
+{
+	int	i;
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
-#endif
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+// int main()
+// {
+// 	ft_putstr("abdel moughite \n");
+// }

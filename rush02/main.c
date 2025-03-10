@@ -15,6 +15,21 @@ int is_valid_number(char *str)
     return 1;
 }
 
+void print_value_for_number(t_dict *dict, int dict_size, char *number)
+{
+    for (int i = 0; i < dict_size; i++)
+    {
+        if (ft_strcmp(dict[i].key, number) == 0) // Check if the number matches the key
+        {
+            ft_putstr(dict[i].value); // Print the corresponding value
+            return; // Exit the function as we found the number
+        }
+    }
+    
+    // If not found, print error message
+    print_error("Dict Error\n");
+}
+
 
 
 int	main(int ac, char **av)
@@ -53,8 +68,10 @@ int	main(int ac, char **av)
     if (!check_required_entries(dict, dict_size))
         return 1;
 
-    printf("Now we can process the data in dct\n");
+      print_value_for_number(dict, dict_size, number);
 
-    // free(dict);
+    // printf("Now we can process the data in dct\n");
+
+    free(dict);
     return 0;
 }

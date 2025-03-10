@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abhaifou <abhaifou@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 10:51:59 by abhaifou          #+#    #+#             */
-/*   Updated: 2025/03/09 16:17:14 by abhaifou         ###   ########.fr       */
+/*   Created: 2025/03/10 10:48:36 by abhaifou          #+#    #+#             */
+/*   Updated: 2025/03/10 10:54:51 by abhaifou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include<unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
-#endif
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

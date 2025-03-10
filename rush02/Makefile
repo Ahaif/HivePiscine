@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = rush-02
 
 # Source Files
-SRCS = main.c parser.c
+SRCS = main.c parser.c utils.c
 
 # Object Files
 OBJS = $(SRCS:.c=.o)
